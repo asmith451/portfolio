@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ac91f7abb3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <img src="image/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer/Designer</p>
+                <h1>Hi, I'm <span>Antone Smith</span><br>From New York</br></h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about-------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            <img src="image/DSC-0565.jpg">
+            </div>
+            <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>One of the things I like to do is draw, however, I draw during my free time. I do regular drawing, cray-pas drawing, digital drawing, and motion graphics sometimes.</p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web Development</span><br>Designing Websites</span></li>
+                    <li><span>Graphic Designer</span><br>Digital Designing</span></li>
+                    <li><span>Photography/Videography</span><br>Taking pictures and editing it. Recording and editing videos.</span></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Chelsea CTE High School, Designer: April 2018 - June 2018</span><br>Worked with a team to create the Hudson Square Community Banner. I was in charge of designing the banner.</span></li>
+                    <li><span>Chelsea CTE High School, INTERN: March 2018 - June 2018</span><br>Worked with a team to create the Hudson Square Community Banner. I was in charge of designing the banner.</span></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Borough of Manhattan Community College: August 2018 - May 2020</span><br>Associate Degree: Animation and Motion Graphics</span></li>
+                    <li><span>Adobe Certified Associate: June 2018</span><br>Visual Communication using Adobe Photoshop</span></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>  
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+            </div>
+            <div>
+                <i class="fa-solid fa-pencil"></i>
+                <h2>Graphic Design</h2>
+            </div>
+            <div>
+                <i class="fa-solid fa-video"></i>
+                <h2>Videography</h2>
+            </div>
+            <div>
+                <i class="fa-solid fa-camera"></i>
+                <h2>Photography</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -----------portfolio-------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="image/dice.png">
+                <div class="layer">
+                    <h3>Dicee Game</h3>
+                    <p> I created this website using CSS for visual elements and javascript for its behavior.</p>
+                    <a href="pages/page.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/drumkit.png">
+                <div class="layer">
+                    <h3>Drum Kit Website</h3>
+                    <p> I created this drum kit website by using HTML for structure, CSS for visuals, and javascript to control behaviors.</p>
+                    <a href="pages/page2.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/simon.png">
+                <div class="layer">
+                    <h3>Simon Website</h3>
+                    <p> I created this simon website by using javascript as dicate the game movement and sounds.</p>
+                    <a href="pages/page3.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links")
+var tabcontents = document.getElementsByClassName("tab-contents")
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+<script>
+
+var sidemeu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemeu.style.right = "0";
+}
+function closemenu(){
+    sidemeu.style.right = "-200px";
+}
+
+</script>
+
+</body>
+</html>
